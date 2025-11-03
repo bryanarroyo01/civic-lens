@@ -39,8 +39,28 @@ body.dark-mode {
 }
 
 /* ///ADD/// Skip Link Styles */
-
+#skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--news-flash);
+  color: var(--watchdog-white);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+#skip-to-main:focus {
+  top: 0;
+}
 /* ///ADD/// Navigation Styles */
+nav ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+li {
+  list-style-type: none;
+}
 
 /* ///ADD/// Global Layout Styles */
 
