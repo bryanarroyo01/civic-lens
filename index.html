@@ -3,12 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Bryan Arroyo">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
-  <meta name="author" content="Civic Lens">
+  <meta name="keywords" content="Civic Lens, independent news, investigative journalism, unbiased reporting, truth-driven storytelling, social justice, civic engagement, news organization">
+  <meta name="robots" content="index, follow">  
 
 <!-- ADD Open Graph Meta for title, description, image, url, type -->
+  <meta name="twitter:title" content="Civic Lens - See Clearly. Know Deeply. Act Justly.">
+  <meta name="twitter:description" content="Civic Lens is an independent news organization  committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
+  <meta name="twitter:image" content="#">
+  <meta name="twitter:site" content="@civiclens">
 
+  <meta property="og:title" content="Civic Lens - See Clearly. Know Deeply. Act Justly.">
+  <meta property="og:description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="#">
+  <meta property="og:image" content="#">
+  <meta property="og:site_name" content="Civic Lens - See Clearly. Know Deeply. Act Justly.">
+  <meta property="og:locale" content="en_US">
 <!-- ADD link to stylesheet -->
 <link rel="stylesheet" href="styles.css">
 
@@ -17,143 +30,146 @@
 <body>
 <!-- ADD semantic and validated HTML -->
 <!-- ADD skip to main content -->
- <a href="#main" id="skip-to-main">Skip to Main Content</a>
+  <a href="#main" id="skip-to-main">Skip to Main Content</a>
+  <header>
     <button id="theme-toggle" aria-label="Toggle light/dark mode">
-      <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <defs><clipPath id="a"><path d="m18.512 18.512h62.977v62.977h-62.977z"/></clipPath></defs>
-        <g clip-path="url(#a)"><path d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531" fill="#333" fill-rule="evenodd"/></g>
+    <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs><clipPath id="a"><path d="m18.512 18.512h62.977v62.977h-62.977z"/></clipPath></defs>
+      <g clip-path="url(#a)"><path d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531" fill="#333" fill-rule="evenodd"/></g>
+    </svg>
+  </button>
+    <h1>Civic Lens</h1>
+    <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+      <input type="checkbox" id="menu-toggle" hidden>
+      <label for="menu-toggle" class="menu-button">Menu</label>
+      <ul class="menu">
+        <li><a href="#breaking-news">Breaking News</a></li>
+        <li><a href="#featured-aticles">Featured Articles</a></li>
+        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#social">Social</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <h2>Welcome to Civic Lens</h2>
+    <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
+    <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
+    <section id="breaking-news"><h2>Breaking News</h2>
+      <section id="main_news">
+      <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+      <video controls>
+        <source src="videos/water-management.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
+      </section>
+      <section id="secondary_news">
+      <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
+      <video controls>
+        <source src="videos/voter-suppression.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
+      </section>
+    </section>
+    <section id="featured_articles">
+    <h2>Featured Articles</h2>
+
+      <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
+      <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+
+      <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
+      <p>An investigative series on cash bail and its disproportionate impact.</p>
+
+      <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
+      <p>Humanizing the labor that keeps households and economies afloat.</p>
+
+      <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
+      <p>Data visualization showing systemic inequality in real estate today.</p>
+
+      <h3>Climate Injustice: Who Pays for Pollution?</h3>
+      <p>Communities of color bear the brunt of environmental damage.</p>
+
+      <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
+      <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
+
+      <h3>Food Deserts and Corporate Abandonment</h3>
+      <p>Why access to nutrition is a zip code lottery.</p>
+
+      <h3>Policing Mental Health: A Broken Response System</h3>
+      <p>Examining police interactions with those in crisis.</p>
+
+      <h3>The Disinformation Economy</h3>
+      <p>Tracing profit motives behind fake news empires.</p>
+
+      <h3>Facing the Algorithm: AI and Racial Bias</h3>
+      <p>The coded inequalities that shape our lives.</p>
+
+      <h3>The Voting Maze</h3>
+      <p>A guide to understanding your rights amid changing laws.</p>
+
+      <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
+      <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
+    </section>
+  </main>
+  <footer>
+    <section id="Alerts">
+      <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+        <h2>Stay Informed. Stay Empowered.</h2>
+        <p>Receive text messages with the news you want to know.</p>
+
+
+      <label for="name">Name <span class="required_field">*</span></label>
+      <input type="text" name="name" required>
+
+      <label for="phone">Mobile <span class="required_field">*</span></label>
+      <input type="tel" name="phone" placeholder="+1 (555) 555-5555" required>
+
+      <fieldset>
+        <legend>Notification Preferences <span class="required_field">*</span></legend>
+        <input type="radio" name="notification_preferences" id="breaking_news" required>
+        <label for="breaking_news">Breaking News</label>
+        <input type="radio" name="notification_preferences" id="politics">
+        <label for="politics">Politics</label>
+        <input type="radio" name="notification_preferences" id="weather">
+        <label for="weather">Weather</label>
+        <input type="radio" name="notification_preferences" id="sports">
+        <label for="sports">Sports</label>
+        <input type="radio" name="notification_preferences" id="entertainment">
+        <label for="entertainment">Entertainment</label>
+        <input type="radio" name="notification_preferences" id="world">
+        <label for="world">World</label>
+        <input type="radio" name="notification_preferences" id="financial">
+        <label for="financial">Financial</label>
+      </fieldset>
+
+      <input type="button" value="Subscribe">
+      </form>
+    </section>
+    <section id="Social">
+      <h2>Follow Us</h2>
+      <a href="https://twitter.com/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" width="35" height="35" stroke-width="1">
+          <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+          <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+        </svg>
+      </a>
+      <a href="#">Instagram</a>
+      <a href="https://www.youtube.com/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007BFF" width="35" height="35">
+          <path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z"></path>
+          </svg>
+      </a>
+      <a href="#">TikTok</a>
+      <a href="https://www.linkedin.com/">
+        <svg height="35px" width="35px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve">
+          <path style="fill:#0077B7;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"/>
       </svg>
-    </button>
-<header>
-      <h1>Civic Lens</h1>
-      <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
-      
-      <nav class="mobile-nav" aria-label="Mobile Navigation">
-        <input type="checkbox" id="menu-toggle" hidden>
-        <label for="menu-toggle" class="menu-button">Menu</label>
-        <ul class="menu">
-          <li><a href="#breaking-news">Breaking News</a></li>
-          <li><a href="#featured-aticles">Featured Articles</a></li>
-          <li><a href="#alerts">Alerts</a></li>
-          <li><a href="#social">Social</a></li>
-        </ul>
-      </nav>
-</header>
-      <main id="main">
-        <h2>Welcome to Civic Lens</h2>
-        <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
-        <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
-      
-
-      <section id="breaking-news"><h2>Breaking News</h2>
-        <section id="main_news">
-        <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
-        <video controls>
-          <source src="videos/water-management.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
-        </section>
-        <section id="secondary_news">
-        <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
-        <video controls>
-          <source src="videos/voter-suppression.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
-        </section>
-      </section>
-      <section id="featured_articles">
-      <h2>Featured Articles</h2>
-
-        <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
-        <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
-
-        <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
-        <p>An investigative series on cash bail and its disproportionate impact.</p>
-
-        <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
-        <p>Humanizing the labor that keeps households and economies afloat.</p>
-
-        <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
-        <p>Data visualization showing systemic inequality in real estate today.</p>
-
-        <h3>Climate Injustice: Who Pays for Pollution?</h3>
-        <p>Communities of color bear the brunt of environmental damage.</p>
-
-        <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
-        <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
-
-        <h3>Food Deserts and Corporate Abandonment</h3>
-        <p>Why access to nutrition is a zip code lottery.</p>
-
-        <h3>Policing Mental Health: A Broken Response System</h3>
-        <p>Examining police interactions with those in crisis.</p>
-
-        <h3>The Disinformation Economy</h3>
-        <p>Tracing profit motives behind fake news empires.</p>
-
-        <h3>Facing the Algorithm: AI and Racial Bias</h3>
-        <p>The coded inequalities that shape our lives.</p>
-
-        <h3>The Voting Maze</h3>
-        <p>A guide to understanding your rights amid changing laws.</p>
-
-        <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
-        <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
-      </section>
-      </main>
-      <footer>
-      <section id="Alerts">
-        <form action="https://wp.zybooks.com/form-viewer.php" method="post">
-          <h2>Stay Informed. Stay Empowered.</h2>
-          <p>Receive text messages with the news you want to know.</p>
-
-
-        <label for="name">Name <span class="required_field">*</span></label>
-        <input type="text" name="name" required>
-
-        <label for="phone">Mobile <span class="required_field">*</span></label>
-        <input type="tel" name="phone" placeholder="+1 (555) 555-5555" required>
-
-        <fieldset>
-          <legend>Notification Preferences <span class="required_field">*</span></legend>
-          <input type="radio" name="notification_preferences" id="breaking_news" required>
-          <label for="breaking_news">Breaking News</label>
-          <input type="radio" name="notification_preferences" id="politics">
-          <label for="politics">Politics</label>
-          <input type="radio" name="notification_preferences" id="weather">
-          <label for="weather">Weather</label>
-          <input type="radio" name="notification_preferences" id="sports">
-          <label for="sports">Sports</label>
-          <input type="radio" name="notification_preferences" id="entertainment">
-          <label for="entertainment">Entertainment</label>
-          <input type="radio" name="notification_preferences" id="world">
-          <label for="world">World</label>
-          <input type="radio" name="notification_preferences" id="financial">
-          <label for="financial">Financial</label>
-        </fieldset>
-
-        <input type="button" value="Subscribe">
-        </form>
-        </section>
-        <section id="Social">
-      
-        <div id="social_media">
-          <h2>Follow Us</h2>
-          <a href="#">Twitter/X</a>
-          <a href="#">Instagram</a>
-          <a href="#">YouTube</a>
-          <a href="#">TikTok</a>
-          <a href="#">LinkedIn</a>
-        </div>
-          &copy; 2025 Civic Lens. All rights reserved.
-      </footer>
-      </section>
-        
-        
-        
-        
+      </a>
+      <p>&copy; 2025 Civic Lens. All rights reserved.</p>
+    </section>
+  </footer>
   <script>
     const toggleButton = document.getElementById('theme-toggle');
   
