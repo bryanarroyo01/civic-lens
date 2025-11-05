@@ -75,7 +75,28 @@ li {
 }
 
 /* ///ADD/// Global Layout Styles */
-
+body{
+  width: 100%;
+  padding: 0 2px;
+  display: grid;
+  grid-template-rows: 
+    'header' auto
+    'main' auto
+    'footer' auto;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}
 /* ///ADD/// Global Text Styles */
 
 
