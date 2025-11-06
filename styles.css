@@ -101,6 +101,11 @@ footer {
 }
 /* ///ADD/// Global Text Styles */
 
+/* Subtitles Fonts */
+#featured_articles > p {
+  
+  color: var(--story-subtitle)
+}
 
 /* ///ADD/// medium styles 620px */
 
