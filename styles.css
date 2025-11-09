@@ -99,6 +99,8 @@ footer {
 #Social a{
   display: inline-block;
 }
+
+
 /* ///ADD/// Global Text Styles */
 body {
   font-family: var(--font-body);
@@ -106,12 +108,49 @@ body {
   font-size: 1rem;
   transition: var(--transition); */
 }
+h1, h2, h3{
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  /* margin-bottom: 0.5rem; */
+  /* transition: var(--transition); */
+}
+h2{
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+#main_news  h3,
+#secondary_news h3
+{
+  /* font-size: 1.5rem; */
+  color: var(--news-flash);
+  margin-left: 5px;
+}
+video{
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+video + p {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+
+}
 /* Subtitles Fonts */
+#featured_articles :not(h2){
+  margin-left: 5px;
+}
 #featured_articles > p {
-  
-  color: var(--story-subtitle)
+  line-height: 1rem;
+  color: var(--story-subtitle);
+  font-weight: 375;
+}
+#featured_articles h3{
+  line-height: 1.1rem;
+  /* background: red; */
 }
 
+#featured_articles > p + h3 {
+  margin-top: 0.5rem;
+}
 /* ///ADD/// medium styles 620px */
 
 
