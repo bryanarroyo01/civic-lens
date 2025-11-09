@@ -32,13 +32,36 @@ input, button{
 }
 
 /* Manual Light/Dark Mode Styles*/
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --background-color: var(--watchdog-white);
+    --text-color: var(--truth-text);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: var(--truth-text);
+    --text-color: var(--watchdog-white);
+  }
+}
+
+body{
+  background: var(--background-color);
+  color: var(--text-color);
+} */
 body.light-mode {
   background-color: var(--watchdog-white);
   color: var(--truth-text);
+  /* Create variables for footer background and text */
+  --background-color:var(--watchdog-white);
+  --text-color: var(--truth-text);
 }
 body.dark-mode {
   background-color: var(--truth-text);
   color: var(--watchdog-white);
+  /* Create variables for footer background and text */
+    --background-color:var(--truth-text);
+  --text-color: var(--watchdog-white);
 }
 #theme-toggle {
   position: absolute;
@@ -77,12 +100,13 @@ li {
 /* ///ADD/// Global Layout Styles */
 body{
   padding: 0 2px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
     "main"
-    "footer";
+    "footer"; */
   min-height: 100vh;
   gap: 1rem;
 }
@@ -91,14 +115,34 @@ header {
 }
 main {
   grid-area: main;
+  padding-bottom: 100px;
 }
 footer {
   grid-area: footer;
+  background: inherit;
+  color: inherit; 
 }
 
-#Social a{
-  display: inline-block;
+#Social{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: inherit;
+  height: 100px;
 }
+#Social > h2{
+  text-align: center;
+  margin:0;
+}
+
+#links{
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
 
 
 /* ///ADD/// Global Text Styles */
@@ -107,6 +151,11 @@ body {
   /* line-height: 1.6;
   font-size: 1rem;
   transition: var(--transition); */
+}
+h1{
+  font-size: 2.5rem;
+  text-align: center;
+  /* margin-bottom: 1rem; */
 }
 h1, h2, h3{
   font-family: var(--font-heading);
@@ -118,6 +167,10 @@ h2{
   margin-top: 1rem;
   margin-bottom: 1.2rem;
 }
+h3:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
 #main_news  h3,
 #secondary_news h3
 {
@@ -127,11 +180,11 @@ h2{
 }
 video{
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 video + p {
   margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
+  margin-left: 1.2rem;
 
 }
 /* Subtitles Fonts */
