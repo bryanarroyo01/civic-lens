@@ -32,20 +32,24 @@
   }
 
   /* Manual Light/Dark Mode Styles*/
+  body{
+    transition: var(--transition);
+  }
 
   body.light-mode {
     background-color: var(--watchdog-white);
     color: var(--truth-text);
-    /* Create variables for footer background and text */
-    --background-color:var(--watchdog-white);
-    --text-color: var(--truth-text);
+
+    --page-background: var(--watchdog-white);
+    --page-text-color: var(--truth-text);
+
   }
   body.dark-mode {
     background-color: var(--truth-text);
     color: var(--watchdog-white);
-    /* Create variables for footer background and text */
-      --background-color:var(--truth-text);
-    --text-color: var(--watchdog-white);
+
+    --page-background: var(--truth-text);
+    --page-text-color: var(--watchdog-white);
   }
   #theme-toggle {
     position: absolute;
@@ -72,49 +76,103 @@
     top: 0;
   }
   /* ///ADD/// Navigation Styles */
-  nav ul{
+  #menu-toggle{
+    display: none;
+  }
+  .tagline{
+    font-style: italic;
+    text-align: center;
+    right: auto;
+    display: inline-block
+  }
+  /* .mobile-nav{
+    width:30px;
+    display: inline-block;
+  } */
+  .menu-button{
+    width: 30px;
+    height: 25px;
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 101; /* Above the menu */
+    cursor: pointer;
   }
-  li {
-    list-style-type: none;
+  .burger-line{ 
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--page-text-color);
+    border-radius: 2px;
+    transition: var(--transition)
   }
+
+  #menu-toggle:checked + .menu-button .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 11px);
+  }
+  #menu-toggle:checked + .menu-button .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle:checked + .menu-button .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -11px);
+  }
+  .menu{
+    position: fixed;
+    top: 35px;
+    left: -100%;
+    width: 150px;
+    height: 100vh;
+    background-color: var(--page-background);
+    color: var(--page-text-color);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1.5rem;
+    transition: var(--transition);
+  }
+  #menu-toggle:checked ~.menu{
+    left:0; /* Slide in the menu */
+  }
+
+
+
+ 
+nav ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+li {
+  list-style-type: none;
+}
+
+
 
   /* ///ADD/// Global Layout Styles */
   body{
-    padding: 0 2px;
     display: flex;
     flex-direction: column;
-    /* grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer"; */
-    min-height: 100vh;
     gap: 1rem;
   }
-  header {
-    grid-area: header;
-  }
+  
   main {
-    grid-area: main;
     padding-bottom: 100px;
   }
   footer {
-    grid-area: footer;
     background: inherit;
     color: inherit; 
   }
 
-  #Social{
+  #social{
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: inherit;
-    height: 100px;
+    height: 115px;
   }
-  #Social > h2{
+  #social > h2{
     text-align: center;
     margin:0;
   }
@@ -130,47 +188,62 @@
   form{
     display: flex;
     flex-direction: column;
-    gap: 0.52rem;
+    gap: 0.5rem;
+  }
+  input[type="submit"]{
+    box-shadow: var(--shadow);
+    height: 2.5rem;
+    transition: var(--transition);
+    background: var(--page-text-color);
+    font-weight: 700;
+    color: var(--page-background)
+  }
+  input[type="submit"]:hover{
+    background: var(--news-flash);
+  }
+  form > h2,
+  form > p {
+    margin-bottom: 0.1rem;
   }
   .required_field{
     color: var(--news-flash);
   }
-   form > filter{
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
+   form > fieldset{
+    display: grid;
+    grid-template-columns: 35px auto;
+    gap: 0.25rem
    }
-
    svg{
-    width: 46px;
-    height: 46px;
-    fill: var(--watchdog-white);
-    stroke-width: (var(--truth-text));
+    width: 45px;
+    height: 45px;
+    fill: var(--page-background);
+    stroke: var(--page-text-color);
+    stroke-width: 2.5px;
+    transition: var(--transition)
    }
-
+   svg:hover{
+    transform: scale(1.1)
+   }
 
 
   /* ///ADD/// Global Text Styles */
   body {
     font-family: var(--font-body);
-    /* line-height: 1.6;
-    font-size: 1rem;
-    transition: var(--transition); */
   }
   h1{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-align: center;
-    /* margin-bottom: 1rem; */
   }
   h1, h2, h3{
     font-family: var(--font-heading);
     line-height: 1.2;
-    /* margin-bottom: 0.5rem; */
-    /* transition: var(--transition); */
   }
   h2{
     margin-top: 1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  h3{
+    transition: var(--transition);
   }
   h3:hover{
     text-decoration: underline;
@@ -178,7 +251,6 @@
   }
   #breaking-news h3
   {
-    /* font-size: 1.5rem; */
     color: var(--news-flash);
     margin-left: 5px;
   }
@@ -192,22 +264,12 @@
 
   }
   /* Subtitles Fonts */
-  #featured_articles :not(h2){
+  #featured-articles > p {
     margin-left: 5px;
-  }
-  #featured_articles > p {
-    line-height: 1rem;
     color: var(--story-subtitle);
     font-weight: 375;
   }
-  #featured_articles h3{
-    line-height: 1.1rem;
-    /* background: red; */
-  }
 
-  #featured_articles > p + h3 {
-    margin-top: 0.5rem;
-  }
   /* ///ADD/// medium styles 620px */
   @media (min-width: 620px) {
     /* body{
@@ -224,42 +286,37 @@
 
   /* ///ADD/// x-large styles 1024px */
   @media (min-width: 1024px) {
-    /* body{
-    padding: 0 2px;
-    display: flex;
-    flex-direction: column;
-    /* grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer"; 
-    min-height: 100vh;
-    gap: 1rem;
-  } */
-  main{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: 
-      "breaking-news featured_articles"
-      "secondary_news featured_articles";
-  }
-  #breaking-news{
-    grid-area: breaking-news;
-  }
-  #secondary_news{
-    grid-area: secondary_news;
-  }
-  #featured_articles{
-    grid-area: featured_articles;
-    padding-left: 2rem;
-    border-left: 2px solid var(--blue-bulletin);
-  }
+    #social{
+      position: relative;
+    }
+    main{
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-areas: 
+        "breaking-news featured-articles"
+        "secondary_news featured-articles";
+    }
+    #breaking-news{
+      grid-area: breaking-news;
+    }
+    #secondary_news{
+      grid-area: secondary_news;
+    }
+    #featured-articles{
+      grid-area: featured-articles;
+      padding-left: 2rem;
+      border-left: 2px solid var(--blue-bulletin);
+    }
   }
 
   /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
-
-
-  /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-  @supports (selector(:has(*))) {
-
+  @media (prefers-reduced-motion: reduce){
+    body{
+      transition: none;
+    }
   }
+
+    /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
+    @supports (selector(:has(*))) {
+
+    }
