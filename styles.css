@@ -1,7 +1,7 @@
-  CSS by ///ADD/// YOUR NAME
+  /* CSS by ///ADD/// YOUR NAME
   /* Author: Bryan Arroyo */
   /* Imported Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
   /* ///ADD/// CSS Reset */
   *, *::before, *::after {
@@ -9,12 +9,10 @@
     padding: 0;
     box-sizing: border-box;
   }
-
   video, svg{
     display:block;
     max-width: 100%;
   }
-
   input, button{
     font: inherit;
   }
@@ -30,12 +28,10 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     --transition: all 0.5s ease;
   }
-
   /* Manual Light/Dark Mode Styles*/
   body{
     transition: var(--transition);
   }
-
   body.light-mode {
     background-color: var(--watchdog-white);
     color: var(--truth-text);
@@ -46,7 +42,6 @@
   }
   body.dark-mode {
     background-color: var(--truth-text);
-    color: var(--watchdog-white);
 
     --page-background: var(--truth-text);
     --page-text-color: var(--watchdog-white);
@@ -60,7 +55,6 @@
     border-radius: 1.5rem;
     cursor: pointer;
   }
-
   /* ///ADD/// Skip Link Styles */
   #skip-to-main {
     position: absolute;
@@ -82,16 +76,15 @@
   .tagline{
     font-style: italic;
     text-align: center;
+    width:100%;
+    
     right: auto;
     display: inline-block
   }
-  /* .mobile-nav{
-    width:30px;
-    display: inline-block;
-  } */
   .menu-button{
     width: 30px;
     height: 25px;
+    top: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -107,7 +100,6 @@
     border-radius: 2px;
     transition: var(--transition)
   }
-
   #menu-toggle:checked + .menu-button .burger-line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 11px);
   }
@@ -119,7 +111,7 @@
   }
   .menu{
     position: fixed;
-    top: 35px;
+    top: 7rem;
     left: -100%;
     width: 150px;
     height: 100vh;
@@ -134,37 +126,27 @@
   }
   #menu-toggle:checked ~.menu{
     left:0; /* Slide in the menu */
+  } 
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
-
-
-
- 
-nav ul{
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-li {
-  list-style-type: none;
-}
-
-
-
+  li {
+    list-style-type: none;
+  }
   /* ///ADD/// Global Layout Styles */
   body{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
   }
-  
-  main {
-    padding-bottom: 100px;
+  main{
+    margin-bottom: 150px;
   }
   footer {
     background: inherit;
     color: inherit; 
   }
-
   #social{
     position: fixed;
     bottom: 0;
@@ -176,7 +158,6 @@ li {
     text-align: center;
     margin:0;
   }
-
   #links{
     background: inherit;
     display: flex;
@@ -184,7 +165,6 @@ li {
     align-items: center;
     gap: 1.2rem;
   }
-
   form{
     display: flex;
     flex-direction: column;
@@ -196,7 +176,8 @@ li {
     transition: var(--transition);
     background: var(--page-text-color);
     font-weight: 700;
-    color: var(--page-background)
+    color: var(--page-background);
+    border-radius: 8px;
   }
   input[type="submit"]:hover{
     background: var(--news-flash);
@@ -229,14 +210,15 @@ li {
   /* ///ADD/// Global Text Styles */
   body {
     font-family: var(--font-body);
+    color: var(--page-text-color);
+    margin-left: 0.5rem;
   }
   h1{
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-align: center;
   }
   h1, h2, h3{
     font-family: var(--font-heading);
-    line-height: 1.2;
   }
   h2{
     margin-top: 1rem;
@@ -249,14 +231,14 @@ li {
     text-decoration: underline;
     cursor: pointer;
   }
-  #breaking-news h3
-  {
+  #breaking-news h3{
     color: var(--news-flash);
     margin-left: 5px;
   }
   video{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    width: 98%;
   }
   video + p {
     margin-bottom: 0.5rem;
@@ -267,7 +249,7 @@ li {
   #featured-articles > p {
     margin-left: 5px;
     color: var(--story-subtitle);
-    font-weight: 375;
+    /* font-weight: 375; */
   }
 
   /* ///ADD/// medium styles 620px */
@@ -286,26 +268,88 @@ li {
 
   /* ///ADD/// x-large styles 1024px */
   @media (min-width: 1024px) {
+    body{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    main{
+      margin-bottom: 0px;
+    }
+    .menu{
+      position: relative;
+      top:auto;
+    }
+    .menu-button{
+      visibility: hidden;
+    }
+    .navigation{
+      position: relative;
+      right:0;
+    }
+    .navigation > ul {
+      /* visibility: hidden; */
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      left:0;
+    }
+
     #social{
       position: relative;
     }
     main{
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: 
         "breaking-news featured-articles"
-        "secondary_news featured-articles";
+        "breaking-news subscribe";
+    }
+    /* footer{
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr;
+      grid-template-areas: 
+      "left form-area right"
+      "follow follow follow";
+    } */
+    main > h2{
+      grid-area: welcome;
     }
     #breaking-news{
       grid-area: breaking-news;
     }
-    #secondary_news{
-      grid-area: secondary_news;
+    #breaking-news p {
+      margin-left: 0.25rem;
     }
     #featured-articles{
       grid-area: featured-articles;
       padding-left: 2rem;
-      border-left: 2px solid var(--blue-bulletin);
+    }
+    #alerts{
+      grid-area: subscribe;
+      width: 55%;
+      height: 500px;
+      background:var(--blue-bulletin);
+      color: var(--watchdog-white);
+      padding: 15px;
+      box-shadow: var(--shadow);
+      border-radius: 10px;
+    }
+
+    #social{
+      grid-area: follow
+    }
+    svg{
+      width:45px;
+      height: 45px;
+    }
+
+    /* Text Formatting */
+    header,
+    main,
+    footer{
+      font-size: clamp(16px,4rem);
     }
   }
 
@@ -316,7 +360,20 @@ li {
     }
   }
 
-    /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-    @supports (selector(:has(*))) {
-
+  /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
+  @supports (selector(:has(*))) {
+    /* Bryan Review */
+    /* Neutralize fallback so both don’t trigger */
+    #menu-toggle:checked ~ .menu {
+      left: -100%;
     }
+
+    /* Use modern :has() instead */
+    .navigation:has(#menu-toggle:checked) .menu {
+      left: 0;
+    }
+
+    .navigation:has(#menu-toggle:checked) .burger-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 11px);
+    }
+  } 
