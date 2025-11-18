@@ -1,122 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Bryan Arroyo">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
-  <meta name="keywords" content="Civic Lens, independent news, investigative journalism, unbiased reporting, truth-driven storytelling, social justice, civic engagement, news organization">
-  <meta name="robots" content="index, follow">  
+  <meta name="description"
+    content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
+  <meta name="keywords"
+    content="Civic Lens, independent news, investigative journalism, unbiased reporting, truth-driven storytelling, social justice, civic engagement, news organization">
+  <meta name="robots" content="index, follow">
 
-<!-- ADD Open Graph Meta for title, description, image, url, type -->
+  <!-- ADD Open Graph Meta for title, description, image, url, type -->
   <meta name="twitter:title" content="Civic Lens - See Clearly. Know Deeply. Act Justly.">
-  <meta name="twitter:description" content="Civic Lens is an independent news organization  committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
+  <meta name="twitter:description"
+    content="Civic Lens is an independent news organization  committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
   <meta name="twitter:image" content="#">
   <meta name="twitter:site" content="@civiclens">
 
   <meta property="og:title" content="Civic Lens - See Clearly. Know Deeply. Act Justly.">
-  <meta property="og:description" content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
+  <meta property="og:description"
+    content="Civic Lens is an independent news organization committed to unbiased reporting, investigative journalism, and truth-driven storytelling.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="#">
   <meta property="og:image" content="#">
   <meta property="og:site_name" content="Civic Lens - See Clearly. Know Deeply. Act Justly.">
   <meta property="og:locale" content="en_US">
-<!-- ADD link to stylesheet -->
-<link rel="stylesheet" href="styles.css">
+  <!-- ADD link to stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 
   <title>Civic Lens</title>
-</head> 
+</head>
+
 <body>
-<!-- ADD semantic and validated HTML -->
-<!-- ADD skip to main content -->
+  <!-- ADD semantic and validated HTML -->
+  <!-- ADD skip to main content -->
   <a href="#main" id="skip-to-main">Skip to Main Content</a>
   <header>
     <button id="theme-toggle" aria-label="Toggle light/dark mode">
-    <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <defs><clipPath id="a"><path d="m18.512 18.512h62.977v62.977h-62.977z"/></clipPath></defs>
-      <g clip-path="url(#a)"><path d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531" fill="#333" fill-rule="evenodd"/></g>
-    </svg>
-  </button>
+      <svg width="35px" height="35px" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="a">
+            <path d="m18.512 18.512h62.977v62.977h-62.977z" />
+          </clipPath>
+        </defs>
+        <g clip-path="url(#a)">
+          <path
+            d="m65.098 68.164c-9.2812 7.7266-23.09 7.2422-31.797-1.4648-8.707-8.7031-9.1953-22.516-1.4648-31.793 0.74609-0.89844 2.1016-0.96875 2.9258-0.14453l30.473 30.477c0.82422 0.82422 0.75391 2.1797-0.13672 2.9258m7.168-40.43c-12.297-12.297-32.234-12.297-44.531 0-12.297 12.301-12.297 32.234 0 44.531s32.234 12.297 44.531 0 12.297-32.23 0-44.531"
+            fill="#333" fill-rule="evenodd" />
+        </g>
+      </svg>
+    </button>
+    <h1>Civic Lens</h1>
+    <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
     <nav class="navigation" aria-label="Navigation">
       <input type="checkbox" id="menu-toggle">
       <label for="menu-toggle" class="menu-button" aria-label="Menu">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
-        <span class="burger-line"></span>        
+        <span class="burger-line"></span>
       </label>
       <ul class="menu">
-        <li><a href="#breaking-news">Breaking News</a></li>
-        <li><a href="#featured-articles">Featured Articles</a></li>
-        <li><a href="#alerts">Alerts</a></li>
-        <li><a href="#social">Social</a></li>
+        <li><a class="nav_item" href="#breaking-news">Breaking News</a></li>
+        <li><a class="nav_item" href="#featured-articles">Featured Articles</a></li>
+        <li><a class="nav_item" href="#alerts">Alerts</a></li>
+        <li><a class="nav_item" href="#social">Social</a></li>
       </ul>
     </nav>
-    <h1>Civic Lens</h1>
-    <p class="tagline">See Clearly. Know Deeply. Act Justly.</p>
     <h2>Welcome to Civic Lens</h2>
-    <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and shine light on the systems that shape our society.</p>
-<blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
+    <p>We are an independent news organization dedicated to unbiased reporting, investigative journalism, and
+      truth-driven storytelling. At Civic Lens, our mission is to expose the facts, amplify marginalized voices, and
+      shine light on the systems that shape our society.</p>
+    <blockquote class="tagline">“We don't follow the narrative. We follow the facts.”</blockquote>
   </header>
   <main id="main">
-    
-    
-    <section id="breaking-news"><h2>Breaking News</h2>
 
-      <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+
+    <section id="breaking-news">
+      <h2>Breaking News</h2>
       <video controls>
         <source src="videos/water-management.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <p>The Department of Justice has announced a full investigation into decades of water distribution practices affecting tribal lands and rural communities.</p>
+      <h3>Federal Investigation Launched into Water Mismanagement in the Southwest</h3>
+      <p>The Department of Justice has announced a full investigation into decades of water distribution practices
+        affecting tribal lands and rural communities.</p>
 
-
-      <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
       <video controls>
         <source src="videos/voter-suppression.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color and those in rural areas of the country.</p>
+      <h3>Voter Suppression Bill Faces Pushback in State Supreme Court</h3>
+      <p>Civil rights advocates argue that the bill disenfranchises thousands of voters and potential voters of color
+        and those in rural areas of the country.</p>
 
     </section>
     <section id="featured-articles">
       <h2>Featured Articles</h2>
 
-        <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
-        <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
+      <h3>The Cost of Silence: Whistleblower Stories from Inside Tech Giants</h3>
+      <p>Former employees speak out about ethical breaches in data privacy and surveillance.</p>
 
-        <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
-        <p>An investigative series on cash bail and its disproportionate impact.</p>
+      <h3>Unequal Justice: How Bail Systems Harm the Poor</h3>
+      <p>An investigative series on cash bail and its disproportionate impact.</p>
 
-        <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
-        <p>Humanizing the labor that keeps households and economies afloat.</p>
+      <h3>Invisible Work: The Lives of Migrant Caregivers</h3>
+      <p>Humanizing the labor that keeps households and economies afloat.</p>
 
-        <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
-        <p>Data visualization showing systemic inequality in real estate today.</p>
+      <h3>Redlined Still: A New Map of Modern-Day Housing Discrimination</h3>
+      <p>Data visualization showing systemic inequality in real estate today.</p>
 
-        <h3>Climate Injustice: Who Pays for Pollution?</h3>
-        <p>Communities of color bear the brunt of environmental damage.</p>
+      <h3>Climate Injustice: Who Pays for Pollution?</h3>
+      <p>Communities of color bear the brunt of environmental damage.</p>
 
-        <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
-        <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
+      <h3>Teaching Under Fire: The Fight for Inclusive Education</h3>
+      <p>Teachers navigate book bans, curriculum restrictions, and culture wars.</p>
 
-        <h3>Food Deserts and Corporate Abandonment</h3>
-        <p>Why access to nutrition is a zip code lottery.</p>
+      <h3>Food Deserts and Corporate Abandonment</h3>
+      <p>Why access to nutrition is a zip code lottery.</p>
 
-        <h3>Policing Mental Health: A Broken Response System</h3>
-        <p>Examining police interactions with those in crisis.</p>
+      <h3>Policing Mental Health: A Broken Response System</h3>
+      <p>Examining police interactions with those in crisis.</p>
 
-        <h3>The Disinformation Economy</h3>
-        <p>Tracing profit motives behind fake news empires.</p>
+      <h3>The Disinformation Economy</h3>
+      <p>Tracing profit motives behind fake news empires.</p>
 
-        <h3>Facing the Algorithm: AI and Racial Bias</h3>
-        <p>The coded inequalities that shape our lives.</p>
+      <h3>Facing the Algorithm: AI and Racial Bias</h3>
+      <p>The coded inequalities that shape our lives.</p>
 
-        <h3>The Voting Maze</h3>
-        <p>A guide to understanding your rights amid changing laws.</p>
+      <h3>The Voting Maze</h3>
+      <p>A guide to understanding your rights amid changing laws.</p>
 
-        <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
-        <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
+      <h3>After the Cameras Leave: Long-Term Crisis Recovery</h3>
+      <p>Rebuilding trust and infrastructure in disaster-hit communities.</p>
     </section>
     <section id="alerts">
       <form action="https://wp.zybooks.com/form-viewer.php" method="post">
@@ -124,31 +141,31 @@
         <p>Receive text messages with the news you want to know.</p>
 
 
-      <label for="name">Name <span class="required_field">*</span></label>
-      <input type="text" name="name" required>
+        <label for="name">Name <span class="required_field">*</span></label>
+        <input type="text" name="name" required>
 
-      <label for="phone">Mobile <span class="required_field">*</span></label>
-      <input type="tel" name="phone" placeholder="+1 (555) 555-5555" required>
+        <label for="phone">Mobile <span class="required_field">*</span></label>
+        <input type="tel" name="phone" placeholder="+1 (555) 555-5555" required>
 
-      <fieldset>
-        <legend>Notification Preferences <span class="required_field">*</span></legend>
-        <input type="radio" name="notification_preferences" id="breaking_news" required>
-        <label for="breaking_news">Breaking News</label>
-        <input type="radio" name="notification_preferences" id="politics">
-        <label for="politics">Politics</label>
-        <input type="radio" name="notification_preferences" id="weather">
-        <label for="weather">Weather</label>
-        <input type="radio" name="notification_preferences" id="sports">
-        <label for="sports">Sports</label>
-        <input type="radio" name="notification_preferences" id="entertainment">
-        <label for="entertainment">Entertainment</label>
-        <input type="radio" name="notification_preferences" id="world">
-        <label for="world">World</label>
-        <input type="radio" name="notification_preferences" id="financial">
-        <label for="financial">Financial</label>
-      </fieldset>
+        <fieldset>
+          <legend>Notification Preferences <span class="required_field">*</span></legend>
+          <input type="radio" name="notification_preferences" id="breaking_news" required>
+          <label for="breaking_news">Breaking News</label>
+          <input type="radio" name="notification_preferences" id="politics">
+          <label for="politics">Politics</label>
+          <input type="radio" name="notification_preferences" id="weather">
+          <label for="weather">Weather</label>
+          <input type="radio" name="notification_preferences" id="sports">
+          <label for="sports">Sports</label>
+          <input type="radio" name="notification_preferences" id="entertainment">
+          <label for="entertainment">Entertainment</label>
+          <input type="radio" name="notification_preferences" id="world">
+          <label for="world">World</label>
+          <input type="radio" name="notification_preferences" id="financial">
+          <label for="financial">Financial</label>
+        </fieldset>
 
-      <input type="submit" value="Subscribe">
+        <input type="submit" value="Subscribe">
       </form>
     </section>
 
@@ -158,42 +175,65 @@
       <h2>Follow Us</h2>
       <div id="links">
         <a href="https://twitter.com/" aria-label="Follow us on Twitter">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.25 -1.25 35 35" id="Twitter--Streamline-Core" height="35" width="35">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.25 -1.25 35 35" id="Twitter--Streamline-Core"
+            height="35" width="35">
             <g id="twitter--media-twitter-social">
-              <path id="Vector" stroke-linecap="round" stroke-linejoin="round" d="M9.285760714285715 21.821475c-1.6576392857142859 1.302019642857143 -3.560258928571429 2.2573107142857145 -5.594642857142858 2.808882142857143 -0.22408750000000002 0.08148214285714286 -0.4176946428571429 0.2298214285714286 -0.5544964285714286 0.42482142857142857 -0.136825 0.19523214285714285 -0.21022857142857146 0.42783928571428576 -0.21022857142857146 0.66625 0 0.2384107142857143 0.07340357142857144 0.47101785714285715 0.21022857142857146 0.66625 0.13680178571428572 0.19523214285714285 0.3304089285714286 0.3435714285714286 0.5544964285714286 0.42482142857142857C19.755403571428573 33.40535714285715 29.96964285714286 23.214285714285715 28.414285714285718 11.908975000000002l2.6000000000000005 -5.385714285714286h-3.0178571428571432C24.235714285714288 1.9036225000000002 14.253617857142858 2.135765357142857 15.901832142857144 11.978617857142858c0 0 -5.339285714285714 0.9517857142857143 -12.164285714285716 -5.757142857142858 -0.15788035714285717 -0.1558607142857143 -0.35712857142857146 -0.26322678571428576 -0.5741357142857144 -0.30935357142857145 -0.21700714285714287 -0.04612678571428572 -0.4426732142857143 -0.02911071428571429 -0.6503017857142858 0.049051785714285714 -0.2076308928571429 0.07816250000000001 -0.3885096428571429 0.2141982142857143 -0.5212164285714286 0.39199642857142863 -0.1327044642857143 0.17777500000000002 -0.21167714285714287 0.38988392857142856 -0.22756732142857145 0.6111625 -0.7216578571428571 2.9664375 -0.36050857142857146 6.093053571428571 1.0184176785714287 8.816855357142858 1.3789285714285715 2.723801785714286 3.6850125000000005 4.865807142857143 6.503017857142858 6.040287500000001Z" stroke-width="2.5"></path>
+              <path id="Vector" stroke-linecap="round" stroke-linejoin="round"
+                d="M9.285760714285715 21.821475c-1.6576392857142859 1.302019642857143 -3.560258928571429 2.2573107142857145 -5.594642857142858 2.808882142857143 -0.22408750000000002 0.08148214285714286 -0.4176946428571429 0.2298214285714286 -0.5544964285714286 0.42482142857142857 -0.136825 0.19523214285714285 -0.21022857142857146 0.42783928571428576 -0.21022857142857146 0.66625 0 0.2384107142857143 0.07340357142857144 0.47101785714285715 0.21022857142857146 0.66625 0.13680178571428572 0.19523214285714285 0.3304089285714286 0.3435714285714286 0.5544964285714286 0.42482142857142857C19.755403571428573 33.40535714285715 29.96964285714286 23.214285714285715 28.414285714285718 11.908975000000002l2.6000000000000005 -5.385714285714286h-3.0178571428571432C24.235714285714288 1.9036225000000002 14.253617857142858 2.135765357142857 15.901832142857144 11.978617857142858c0 0 -5.339285714285714 0.9517857142857143 -12.164285714285716 -5.757142857142858 -0.15788035714285717 -0.1558607142857143 -0.35712857142857146 -0.26322678571428576 -0.5741357142857144 -0.30935357142857145 -0.21700714285714287 -0.04612678571428572 -0.4426732142857143 -0.02911071428571429 -0.6503017857142858 0.049051785714285714 -0.2076308928571429 0.07816250000000001 -0.3885096428571429 0.2141982142857143 -0.5212164285714286 0.39199642857142863 -0.1327044642857143 0.17777500000000002 -0.21167714285714287 0.38988392857142856 -0.22756732142857145 0.6111625 -0.7216578571428571 2.9664375 -0.36050857142857146 6.093053571428571 1.0184176785714287 8.816855357142858 1.3789285714285715 2.723801785714286 3.6850125000000005 4.865807142857143 6.503017857142858 6.040287500000001Z"
+                stroke-width="2.5"></path>
             </g>
           </svg>
         </a>
         <a href="https://www.instagram.com/" aria-label="Follow us on Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.25 -1.25 35 35" id="Instagram--Streamline-Core" height="35" width="35">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.25 -1.25 35 35" id="Instagram--Streamline-Core"
+            height="35" width="35">
             <g id="instagram">
               <g id="Group 4546">
-                <path id="Vector"  stroke-linecap="round" stroke-linejoin="round" d="M23.987785714285714 8.459378571428571c-0.32058928571428574 0 -0.5803571428571429 -0.2598375 -0.5803571428571429 -0.5803571428571429s0.25976785714285716 -0.5803571428571429 0.5803571428571429 -0.5803571428571429" stroke-width="2.5"></path>
-                <path id="Vector_2"  stroke-linecap="round" stroke-linejoin="round" d="M23.987785714285714 8.459378571428571c0.32058928571428574 0 0.5803571428571429 -0.2598375 0.5803571428571429 -0.5803571428571429s-0.25976785714285716 -0.5803571428571429 -0.5803571428571429 -0.5803571428571429" stroke-width="2.5"></path>
+                <path id="Vector" stroke-linecap="round" stroke-linejoin="round"
+                  d="M23.987785714285714 8.459378571428571c-0.32058928571428574 0 -0.5803571428571429 -0.2598375 -0.5803571428571429 -0.5803571428571429s0.25976785714285716 -0.5803571428571429 0.5803571428571429 -0.5803571428571429"
+                  stroke-width="2.5"></path>
+                <path id="Vector_2" stroke-linecap="round" stroke-linejoin="round"
+                  d="M23.987785714285714 8.459378571428571c0.32058928571428574 0 0.5803571428571429 -0.2598375 0.5803571428571429 -0.5803571428571429s-0.25976785714285716 -0.5803571428571429 -0.5803571428571429 -0.5803571428571429"
+                  stroke-width="2.5"></path>
               </g>
-              <path id="Rectangle 2"  stroke-linecap="round" stroke-linejoin="round" d="M1.9924264285714288 7.965773214285715c0 -3.298819642857143 2.6742253571428574 -5.973063571428572 5.973068214285715 -5.973063571428572h15.928273214285715c3.2987500000000005 0 5.9730357142857144 2.674243928571429 5.9730357142857144 5.973063571428572v15.928226785714287c0 3.2987500000000005 -2.6742857142857144 5.9730357142857144 -5.9730357142857144 5.9730357142857144H7.965494642857144c-3.2988428571428576 0 -5.973068214285715 -2.6742857142857144 -5.973068214285715 -5.9730357142857144V7.965773214285715Z" stroke-width="2.5"></path>
-              <path id="Ellipse 11"  stroke-linecap="round" stroke-linejoin="round" d="M10.010000000000002 15.92964285714286a5.919642857142858 5.919642857142858 0 1 0 11.839285714285715 0 5.919642857142858 5.919642857142858 0 1 0 -11.839285714285715 0" stroke-width="2.5"></path>
+              <path id="Rectangle 2" stroke-linecap="round" stroke-linejoin="round"
+                d="M1.9924264285714288 7.965773214285715c0 -3.298819642857143 2.6742253571428574 -5.973063571428572 5.973068214285715 -5.973063571428572h15.928273214285715c3.2987500000000005 0 5.9730357142857144 2.674243928571429 5.9730357142857144 5.973063571428572v15.928226785714287c0 3.2987500000000005 -2.6742857142857144 5.9730357142857144 -5.9730357142857144 5.9730357142857144H7.965494642857144c-3.2988428571428576 0 -5.973068214285715 -2.6742857142857144 -5.973068214285715 -5.9730357142857144V7.965773214285715Z"
+                stroke-width="2.5"></path>
+              <path id="Ellipse 11" stroke-linecap="round" stroke-linejoin="round"
+                d="M10.010000000000002 15.92964285714286a5.919642857142858 5.919642857142858 0 1 0 11.839285714285715 0 5.919642857142858 5.919642857142858 0 1 0 -11.839285714285715 0"
+                stroke-width="2.5"></path>
             </g>
           </svg>
         </a>
         <a href="https://www.youtube.com/" aria-label="Subscribe to our YouTube channel">
           <svg width="35px" height="35px" viewBox="0 0 35 35" id="icon" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32.167 10.128a3.828 3.828 0 0 0 -2.702 -2.702C27.081 6.781 17.5 6.781 17.5 6.781s-9.581 0 -11.966 0.645a3.828 3.828 0 0 0 -2.702 2.702A39.375 39.375 0 0 0 2.188 17.5a39.375 39.375 0 0 0 0.645 7.372 3.828 3.828 0 0 0 2.702 2.702c2.384 0.645 11.966 0.645 11.966 0.645s9.581 0 11.966 -0.645a3.828 3.828 0 0 0 2.702 -2.702A39.375 39.375 0 0 0 32.813 17.5a39.375 39.375 0 0 0 -0.645 -7.372M14.438 22.094v-9.188l7.952 4.594Z"/>
+            <path
+              d="M32.167 10.128a3.828 3.828 0 0 0 -2.702 -2.702C27.081 6.781 17.5 6.781 17.5 6.781s-9.581 0 -11.966 0.645a3.828 3.828 0 0 0 -2.702 2.702A39.375 39.375 0 0 0 2.188 17.5a39.375 39.375 0 0 0 0.645 7.372 3.828 3.828 0 0 0 2.702 2.702c2.384 0.645 11.966 0.645 11.966 0.645s9.581 0 11.966 -0.645a3.828 3.828 0 0 0 2.702 -2.702A39.375 39.375 0 0 0 32.813 17.5a39.375 39.375 0 0 0 -0.645 -7.372M14.438 22.094v-9.188l7.952 4.594Z" />
           </svg>
         </a>
         <a href="https://www.tiktok.com/en/">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.25 -1.25 35 35" id="Tiktok--Streamline-Core" height="35" width="35">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.25 -1.25 35 35" id="Tiktok--Streamline-Core"
+            height="35" width="35">
             <g id="tiktok">
-              <path id="Ellipse 16" stroke-linecap="round" stroke-linejoin="round" d="M19.55079285714286 22.558087500000003V2.6478678571428573m0 19.91804285714286c0 3.708482142857143 -3.006389285714286 6.714964285714286 -6.714917857142858 6.714964285714286 -3.7085517857142856 0 -6.714917857142858 -3.006482142857143 -6.714917857142858 -6.714964285714286 0 -3.708528571428572 3.006366071428572 -6.714917857142858 6.714917857142858 -6.714917857142858" stroke-width="2.5"></path>
-              <path id="Ellipse 17" stroke-linecap="round" stroke-linejoin="round" d="M19.55079285714286 2.6478678571428573c0 5.4980714285714285 4.456957142857143 9.95512142857143 9.95502857142857 9.95512142857143" stroke-width="2.5"></path>
+              <path id="Ellipse 16" stroke-linecap="round" stroke-linejoin="round"
+                d="M19.55079285714286 22.558087500000003V2.6478678571428573m0 19.91804285714286c0 3.708482142857143 -3.006389285714286 6.714964285714286 -6.714917857142858 6.714964285714286 -3.7085517857142856 0 -6.714917857142858 -3.006482142857143 -6.714917857142858 -6.714964285714286 0 -3.708528571428572 3.006366071428572 -6.714917857142858 6.714917857142858 -6.714917857142858"
+                stroke-width="2.5"></path>
+              <path id="Ellipse 17" stroke-linecap="round" stroke-linejoin="round"
+                d="M19.55079285714286 2.6478678571428573c0 5.4980714285714285 4.456957142857143 9.95512142857143 9.95502857142857 9.95512142857143"
+                stroke-width="2.5"></path>
             </g>
           </svg>
         </a>
         <a href="https://www.linkedin.com/" aria-label="Follow us on LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.25 -1.25 35 35" id="Linkedin--Streamline-Core" height="35" width="35">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.25 -1.25 35 35" id="Linkedin--Streamline-Core"
+            height="35" width="35">
             <g id="linkedin--network-linkedin-professional">
-              <path id="Vector"  stroke-linecap="round" stroke-linejoin="round" d="M8.295926785714286 4.101917857142857c0.006244642857142858 0.8027035714285714 -0.3035732142857143 1.5756232142857145 -0.8625267857142858 2.1517785714285713 -0.5589303571428572 0.576132142857143 -1.3221232142857144 0.9092339285714287 -2.1246410714285715 0.9273178571428572 -0.8008464285714286 -0.029389285714285715 -1.5597910714285717 -0.3653 -2.120021428571429 -0.9383678571428573 -0.5602071428571429 -0.573044642857143 -0.8788742857142857 -1.3393946428571428 -0.8901216071428572 -2.1407285714285718 0.03481446428571429 -0.7806964285714286 0.36517696428571433 -1.5189803571428573 0.92415375 -2.065135892857143 0.5589535714285715 -0.5461625000000001 1.3046892857142858 -0.8593464285714286 2.085989285714286 -0.8760676785714288 0.7790482142857144 0.017032321428571428 1.5221375000000001 0.33099392857142856 2.077376785714286 0.8776973214285715 0.5552392857142857 0.5467080357142857 0.8807035714285715 1.2848526785714287 0.9097910714285714 2.06350625ZM2.6203125 12.649835714285715c0 -1.7693232142857145 1.1259392857142858 -1.4935839285714287 2.6884464285714285 -1.4935839285714287 1.5625303571428573 0 2.6654875000000002 -0.27573928571428574 2.6654875000000002 1.4935839285714287v17.233682142857145c0 1.7923750000000003 -1.1259392857142858 1.4246607142857144 -2.6654875000000002 1.4246607142857144 -1.539525 0 -2.6884464285714285 0.36771428571428577 -2.6884464285714285 -1.4246607142857144V12.649835714285715Z" stroke-width="2.5"></path>
-              <path id="Vector_2"  stroke-linecap="round" stroke-linejoin="round" d="M12.615826785714289 12.650091071428573c0 -0.9880696428571429 0.36764464285714293 -1.3557142857142856 0.9421053571428573 -1.470601785714286 0.5744607142857143 -0.1149107142857143 2.550576785714286 0 3.239925 0 0.6893482142857144 0 0.9650875000000001 1.1259160714285714 0.9421053571428573 1.9761160714285715 0.5896660714285715 -0.791375 1.372544642857143 -1.418207142857143 2.2737464285714286 -1.8205339285714286 0.9011785714285715 -0.4023267857142857 1.8905250000000002 -0.5666607142857144 2.8733946428571433 -0.4772857142857143 0.9651107142857144 -0.05901071428571429 1.9319857142857144 0.08570714285714287 2.837575 0.4247053571428572 0.905357142857143 0.3389982142857143 1.7296964285714287 0.864732142857143 2.4186964285714287 1.5430303571428572 0.689232142857143 0.6782982142857144 1.2278035714285715 1.4939785714285716 1.5811250000000001 2.3940660714285715s0.5132678571428572 1.8644321428571429 0.46962500000000007 2.830378571428572v11.7648375c0 1.7923750000000003 -1.1029107142857144 1.4246607142857144 -2.665464285714286 1.4246607142857144s-2.665464285714286 0.36771428571428577 -2.665464285714286 -1.4246607142857144V20.62354821428572c0.04039285714285714 -0.4730607142857143 -0.02135714285714286 -0.9492553571428572 -0.18130357142857145 -1.3962696428571428 -0.1599464285714286 -0.44701428571428575 -0.414375 -0.8543785714285714 -0.7456428571428572 -1.1944214285714285s-0.7319232142857144 -0.6048017857142858 -1.1746428571428573 -0.7763089285714286c-0.4426964285714286 -0.1714839285714286 -0.9171267857142857 -0.2457232142857143 -1.391069642857143 -0.21761071428571432 -0.47173750000000003 -0.011978571428571429 -0.9406428571428572 0.076375 -1.3756785714285715 0.25923392857142863 -0.4350125 0.1828357142857143 -0.8262428571428573 0.45602142857142863 -1.1477607142857145 0.8014267857142857 -0.3214946428571429 0.3454285714285714 -0.5659875000000001 0.7551839285714286 -0.7172285714285715 1.202175 -0.15124107142857143 0.4469910714285715 -0.20581785714285716 0.9210267857142858 -0.16010892857142858 1.3906982142857143V29.88375c0 1.7923750000000003 -1.1259392857142858 1.4246607142857144 -2.688469642857143 1.4246607142857144 -1.562507142857143 0 -2.665464285714286 0.36771428571428577 -2.665464285714286 -1.4246607142857144V12.650091071428573Z" stroke-width="2.5"></path>
+              <path id="Vector" stroke-linecap="round" stroke-linejoin="round"
+                d="M8.295926785714286 4.101917857142857c0.006244642857142858 0.8027035714285714 -0.3035732142857143 1.5756232142857145 -0.8625267857142858 2.1517785714285713 -0.5589303571428572 0.576132142857143 -1.3221232142857144 0.9092339285714287 -2.1246410714285715 0.9273178571428572 -0.8008464285714286 -0.029389285714285715 -1.5597910714285717 -0.3653 -2.120021428571429 -0.9383678571428573 -0.5602071428571429 -0.573044642857143 -0.8788742857142857 -1.3393946428571428 -0.8901216071428572 -2.1407285714285718 0.03481446428571429 -0.7806964285714286 0.36517696428571433 -1.5189803571428573 0.92415375 -2.065135892857143 0.5589535714285715 -0.5461625000000001 1.3046892857142858 -0.8593464285714286 2.085989285714286 -0.8760676785714288 0.7790482142857144 0.017032321428571428 1.5221375000000001 0.33099392857142856 2.077376785714286 0.8776973214285715 0.5552392857142857 0.5467080357142857 0.8807035714285715 1.2848526785714287 0.9097910714285714 2.06350625ZM2.6203125 12.649835714285715c0 -1.7693232142857145 1.1259392857142858 -1.4935839285714287 2.6884464285714285 -1.4935839285714287 1.5625303571428573 0 2.6654875000000002 -0.27573928571428574 2.6654875000000002 1.4935839285714287v17.233682142857145c0 1.7923750000000003 -1.1259392857142858 1.4246607142857144 -2.6654875000000002 1.4246607142857144 -1.539525 0 -2.6884464285714285 0.36771428571428577 -2.6884464285714285 -1.4246607142857144V12.649835714285715Z"
+                stroke-width="2.5"></path>
+              <path id="Vector_2" stroke-linecap="round" stroke-linejoin="round"
+                d="M12.615826785714289 12.650091071428573c0 -0.9880696428571429 0.36764464285714293 -1.3557142857142856 0.9421053571428573 -1.470601785714286 0.5744607142857143 -0.1149107142857143 2.550576785714286 0 3.239925 0 0.6893482142857144 0 0.9650875000000001 1.1259160714285714 0.9421053571428573 1.9761160714285715 0.5896660714285715 -0.791375 1.372544642857143 -1.418207142857143 2.2737464285714286 -1.8205339285714286 0.9011785714285715 -0.4023267857142857 1.8905250000000002 -0.5666607142857144 2.8733946428571433 -0.4772857142857143 0.9651107142857144 -0.05901071428571429 1.9319857142857144 0.08570714285714287 2.837575 0.4247053571428572 0.905357142857143 0.3389982142857143 1.7296964285714287 0.864732142857143 2.4186964285714287 1.5430303571428572 0.689232142857143 0.6782982142857144 1.2278035714285715 1.4939785714285716 1.5811250000000001 2.3940660714285715s0.5132678571428572 1.8644321428571429 0.46962500000000007 2.830378571428572v11.7648375c0 1.7923750000000003 -1.1029107142857144 1.4246607142857144 -2.665464285714286 1.4246607142857144s-2.665464285714286 0.36771428571428577 -2.665464285714286 -1.4246607142857144V20.62354821428572c0.04039285714285714 -0.4730607142857143 -0.02135714285714286 -0.9492553571428572 -0.18130357142857145 -1.3962696428571428 -0.1599464285714286 -0.44701428571428575 -0.414375 -0.8543785714285714 -0.7456428571428572 -1.1944214285714285s-0.7319232142857144 -0.6048017857142858 -1.1746428571428573 -0.7763089285714286c-0.4426964285714286 -0.1714839285714286 -0.9171267857142857 -0.2457232142857143 -1.391069642857143 -0.21761071428571432 -0.47173750000000003 -0.011978571428571429 -0.9406428571428572 0.076375 -1.3756785714285715 0.25923392857142863 -0.4350125 0.1828357142857143 -0.8262428571428573 0.45602142857142863 -1.1477607142857145 0.8014267857142857 -0.3214946428571429 0.3454285714285714 -0.5659875000000001 0.7551839285714286 -0.7172285714285715 1.202175 -0.15124107142857143 0.4469910714285715 -0.20581785714285716 0.9210267857142858 -0.16010892857142858 1.3906982142857143V29.88375c0 1.7923750000000003 -1.1259392857142858 1.4246607142857144 -2.688469642857143 1.4246607142857144 -1.562507142857143 0 -2.665464285714286 0.36771428571428577 -2.665464285714286 -1.4246607142857144V12.650091071428573Z"
+                stroke-width="2.5"></path>
             </g>
           </svg>
         </a>
@@ -205,10 +245,10 @@
   <script>
     document.body.classList.add(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode'); // This will set the state of the page on reload
     const toggleButton = document.getElementById('theme-toggle');
-  
+
     toggleButton.addEventListener('click', () => {
       const body = document.body;
-  
+
       // Toggle manually between light and dark mode
       if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
@@ -224,4 +264,5 @@
     });
   </script>
 </body>
+
 </html>

@@ -4,18 +4,25 @@
   /* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
   /* ///ADD/// CSS Reset */
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  video, svg{
-    display:block;
+
+  video,
+  svg {
+    display: block;
     max-width: 100%;
   }
-  input, button{
+
+  input,
+  button {
     font: inherit;
   }
+
   /* Root Variables */
   :root {
     --blue-bulletin: #1D3557;
@@ -28,10 +35,12 @@
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     --transition: all 0.5s ease;
   }
+
   /* Manual Light/Dark Mode Styles*/
-  body{
+  body {
     transition: var(--transition);
   }
+
   body.light-mode {
     background-color: var(--watchdog-white);
     color: var(--truth-text);
@@ -40,12 +49,13 @@
     --page-text-color: var(--truth-text);
 
   }
+
   body.dark-mode {
     background-color: var(--truth-text);
-
     --page-background: var(--truth-text);
     --page-text-color: var(--watchdog-white);
   }
+
   #theme-toggle {
     position: absolute;
     top: 1rem;
@@ -55,6 +65,7 @@
     border-radius: 1.5rem;
     cursor: pointer;
   }
+
   /* ///ADD/// Skip Link Styles */
   #skip-to-main {
     position: absolute;
@@ -66,33 +77,38 @@
     z-index: 100;
     transition: top 0.3s;
   }
+
   #skip-to-main:focus {
     top: 0;
   }
+
   /* ///ADD/// Navigation Styles */
-  #menu-toggle{
+  #menu-toggle {
     display: none;
   }
-  .tagline{
+
+  .tagline {
     font-style: italic;
     text-align: center;
-    width:100%;
-    
+    width: 100%;
+
     right: auto;
     display: inline-block
   }
-  .menu-button{
+
+  .menu-button {
     width: 30px;
     height: 25px;
-    top: 2.5rem;
+    top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
-    z-index: 101; /* Above the menu */
-    cursor: pointer;
+    position: fixed;
+    z-index: 101;
+    background: var(--page-background);
   }
-  .burger-line{ 
+
+  .burger-line {
     display: inline-block;
     height: 3px;
     width: 100%;
@@ -100,18 +116,22 @@
     border-radius: 2px;
     transition: var(--transition)
   }
-  #menu-toggle:checked + .menu-button .burger-line:nth-child(1) {
+
+  #menu-toggle:checked+.menu-button .burger-line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 11px);
   }
-  #menu-toggle:checked + .menu-button .burger-line:nth-child(2) {
+
+  #menu-toggle:checked+.menu-button .burger-line:nth-child(2) {
     opacity: 0;
   }
-  #menu-toggle:checked + .menu-button .burger-line:nth-child(3) {
+
+  #menu-toggle:checked+.menu-button .burger-line:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -11px);
   }
-  .menu{
+
+  .menu {
     position: fixed;
-    top: 7rem;
+    top: 0;
     left: -100%;
     width: 150px;
     height: 100vh;
@@ -119,58 +139,71 @@
     color: var(--page-text-color);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     gap: 1.5rem;
     transition: var(--transition);
   }
-  #menu-toggle:checked ~.menu{
-    left:0; /* Slide in the menu */
-  } 
-  nav ul{
+
+  .menu li:first-child {
+    padding-top: 3rem;
+  }
+
+  #menu-toggle:checked~.menu {
+    left: 0;
+  }
+
+  nav ul {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
   }
+
   li {
     list-style-type: none;
   }
+
   /* ///ADD/// Global Layout Styles */
-  body{
+  body {
     display: flex;
     flex-direction: column;
   }
-  main{
+
+  main {
     margin-bottom: 150px;
   }
+
   footer {
     background: inherit;
-    color: inherit; 
+    color: inherit;
   }
-  #social{
+
+  #social {
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: inherit;
     height: 115px;
   }
-  #social > h2{
+
+  #social>h2 {
     text-align: center;
-    margin:0;
+    margin: 0;
   }
-  #links{
+
+  #links {
     background: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.2rem;
   }
-  form{
+
+  form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-  input[type="submit"]{
+
+  input[type="submit"] {
     box-shadow: var(--shadow);
     height: 2.5rem;
     transition: var(--transition);
@@ -179,32 +212,38 @@
     color: var(--page-background);
     border-radius: 8px;
   }
-  input[type="submit"]:hover{
+
+  input[type="submit"]:hover {
     background: var(--news-flash);
   }
-  form > h2,
-  form > p {
+
+  form>h2,
+  form>p {
     margin-bottom: 0.1rem;
   }
-  .required_field{
+
+  .required_field {
     color: var(--news-flash);
   }
-   form > fieldset{
+
+  form>fieldset {
     display: grid;
     grid-template-columns: 35px auto;
     gap: 0.25rem
-   }
-   svg{
+  }
+
+  svg {
     width: 45px;
     height: 45px;
     fill: var(--page-background);
     stroke: var(--page-text-color);
     stroke-width: 2.5px;
     transition: var(--transition)
-   }
-   svg:hover{
+  }
+
+  svg:hover {
     transform: scale(1.1)
-   }
+  }
 
 
   /* ///ADD/// Global Text Styles */
@@ -213,41 +252,57 @@
     color: var(--page-text-color);
     margin-left: 0.5rem;
   }
-  h1{
+
+  .nav_item {
+    color: var(--page-text-color);
+    font-weight: 600;
+  }
+
+  h1 {
     font-size: 3rem;
     text-align: center;
   }
-  h1, h2, h3{
+
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-heading);
   }
-  h2{
+
+  h2 {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    ;
   }
-  h3{
+
+  h3 {
     transition: var(--transition);
   }
-  h3:hover{
+
+  h3:hover {
     text-decoration: underline;
     cursor: pointer;
   }
-  #breaking-news h3{
+
+  #breaking-news h3 {
     color: var(--news-flash);
     margin-left: 5px;
   }
-  video{
+
+  video {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     width: 98%;
   }
-  video + p {
+
+  video+h2 {
     margin-bottom: 0.5rem;
     margin-left: 1.2rem;
-
   }
+
   /* Subtitles Fonts */
-  #featured-articles > p {
-    margin-left: 5px;
+  #featured-articles>p {
+    margin-left: 1.2rem;
     color: var(--story-subtitle);
     /* font-weight: 375; */
   }
@@ -261,110 +316,158 @@
 
   /* ///ADD/// large styles 920px */
   @media (min-width: 920px) {
+
     /* body{
       color: blue;
     } */
-  } 
+    #alerts {
+      background: var(--blue-bulletin);
+      color: var(--watchdog-white);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    form>fieldset {
+      padding: 10px;
+    }
+
+  }
 
   /* ///ADD/// x-large styles 1024px */
   @media (min-width: 1024px) {
-    body{
+
+    /* LAYOUT */
+    body {
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
-    main{
-      margin-bottom: 0px;
-    }
-    .menu{
+
+    .navigation .menu {
       position: relative;
-      top:auto;
-    }
-    .menu-button{
-      visibility: hidden;
-    }
-    .navigation{
-      position: relative;
-      right:0;
-    }
-    .navigation > ul {
-      /* visibility: hidden; */
-      position: relative;
+      left: 0;
+      width: auto;
+      height: auto;
       display: flex;
       flex-direction: row;
-      height: auto;
-      left:0;
+      align-items: center;
+      gap: 1.5rem;
+      overflow: visible;
     }
 
-    #social{
-      position: relative;
+    .menu-button {
+      visibility: hidden
     }
-    main{
+
+    .navigation .menu .li {
+      display: inline-block;
+      list-style: none;
+    }
+
+    .nav_item {
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+      transition: var(--transition);
+      z-index: 1
+    }
+
+    .nav_item:hover {
+      padding-left: calc(12px * 1.1);
+      padding-right: calc(12px * 1.1);
+      color: var(--news-flash);
+    }
+
+
+    main {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
+      grid-template-areas:
         "breaking-news featured-articles"
         "breaking-news subscribe";
+      margin-bottom: 0px;
     }
-    /* footer{
-      display: grid;
-      grid-template-columns: 2fr 1fr 2fr;
-      grid-template-areas: 
-      "left form-area right"
-      "follow follow follow";
-    } */
-    main > h2{
+
+    #theme-toggle {
+      z-index: 1000;
+    }
+
+    .menu {
+      position: relative;
+      top: auto;
+    }
+
+    .menu-button {
+      visibility: hidden;
+    }
+
+    #social {
+      position: relative;
+    }
+
+
+
+
+    main>h2 {
       grid-area: welcome;
     }
-    #breaking-news{
+
+    #breaking-news {
       grid-area: breaking-news;
     }
+
     #breaking-news p {
       margin-left: 0.25rem;
     }
-    #featured-articles{
+
+    #featured-articles {
       grid-area: featured-articles;
       padding-left: 2rem;
     }
-    #alerts{
+
+    #alerts {
+      margin-top: 10px;
       grid-area: subscribe;
       width: 55%;
       height: 500px;
-      background:var(--blue-bulletin);
+      background: var(--blue-bulletin);
       color: var(--watchdog-white);
       padding: 15px;
       box-shadow: var(--shadow);
       border-radius: 10px;
+      justify-self: center;
     }
 
-    #social{
+    #social {
       grid-area: follow
     }
-    svg{
-      width:45px;
+
+    svg {
+      width: 45px;
       height: 45px;
     }
 
     /* Text Formatting */
     header,
     main,
-    footer{
-      font-size: clamp(16px,4rem);
+    footer {
+      font-size: clamp(16px, 4rem);
     }
   }
 
   /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
-  @media (prefers-reduced-motion: reduce){
-    body{
+  @media (prefers-reduced-motion: reduce) {
+    body {
       transition: none;
     }
   }
 
   /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
   @supports (selector(:has(*))) {
+
     /* Bryan Review */
     /* Neutralize fallback so both don’t trigger */
-    #menu-toggle:checked ~ .menu {
+    #menu-toggle:checked~.menu {
       left: -100%;
     }
 
@@ -376,4 +479,4 @@
     .navigation:has(#menu-toggle:checked) .burger-line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 11px);
     }
-  } 
+  }
