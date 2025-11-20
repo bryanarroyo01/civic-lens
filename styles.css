@@ -131,10 +131,10 @@
 
   .menu {
     position: fixed;
-    top: 0;
+    top: 13vh;
     left: -100%;
-    width: 150px;
-    height: 100vh;
+    width: 100vw;
+    height: 87vh;
     background-color: var(--page-background);
     color: var(--page-text-color);
     display: flex;
@@ -142,6 +142,7 @@
     align-items: center;
     gap: 1.5rem;
     transition: var(--transition);
+    overflow-y: hidden;
   }
 
   .menu li:first-child {
@@ -226,7 +227,7 @@
     color: var(--news-flash);
   }
 
-  form>fieldset {
+  form > fieldset {
     display: grid;
     grid-template-columns: 35px auto;
     gap: 0.25rem
@@ -378,6 +379,9 @@
       color: var(--news-flash);
     }
 
+    .menu li:first-child {
+      padding-top: 0;
+    }
 
     main {
       display: grid;
