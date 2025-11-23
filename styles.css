@@ -1,7 +1,7 @@
   /* CSS by ///ADD/// YOUR NAME
   /* Author: Bryan Arroyo */
   /* Imported Fonts */
-  /* @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,87..112,300..900;1,18..144,87..112,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
   /* ///ADD/// CSS Reset */
   *,
@@ -143,14 +143,19 @@
     gap: 1.5rem;
     transition: var(--transition);
     overflow-y: hidden;
+    z-index: 1000;
+    transform: translateZ(0)
   }
 
-  .menu li:first-child {
+  #nav_1 {
     padding-top: 3rem;
   }
 
   #menu-toggle:checked~.menu {
     left: 0;
+  }
+  a{
+  color:inherit
   }
 
   nav ul {
@@ -166,6 +171,9 @@
   body {
     display: flex;
     flex-direction: column;
+    font-family: var(--font-body);
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   main {
@@ -183,6 +191,7 @@
     width: 100%;
     background-color: inherit;
     height: 115px;
+    z-index: 1001;
   }
 
   #social>h2 {
@@ -198,7 +207,20 @@
     gap: 1.2rem;
   }
 
-  form {
+  #alerts {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-self:center;
+    margin-top: 1rem;
+    background: var(--blue-bulletin);
+    color: var(--watchdog-white);
+    padding: 15px;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+  }
+
+  #alerts > form{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -230,7 +252,8 @@
   form > fieldset {
     display: grid;
     grid-template-columns: 35px auto;
-    gap: 0.25rem
+    gap: 0.5rem;
+    padding: 10px;
   }
 
   svg {
@@ -262,6 +285,7 @@
   h1 {
     font-size: 3rem;
     text-align: center;
+    margin-top: 0.5rem;
   }
 
   h1,
@@ -313,19 +337,51 @@
     /* body{
       color: green;
     } */
+    .menu-button {
+      visibility: hidden;
+    }
+    #alerts {
+      width: 550px;
+    }
   }
 
   /* ///ADD/// large styles 920px */
   @media (min-width: 920px) {
 
-    /* body{
-      color: blue;
-    } */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "header header"
+        "breaking_news breaking_news"
+        "featured_news alerts";
+      margin-bottom: 0px;
+    }
+    header{
+      grid-area: header;
+    }
+    #breaking-news {
+      grid-area: breaking_news;
+    }
+    #featured-articles {
+      grid-area: featured_news;
+    }
+    #social{
+      position: relative;
+    }
+    footer{
+      grid-area: footer;
+    }
     #alerts {
+      grid-area: alerts;
       background: var(--blue-bulletin);
       color: var(--watchdog-white);
       border-radius: 10px;
       padding: 10px;
+      justify-self: center;
+      align-self: center;
+      /* height: auto; */
+      
     }
 
     form>fieldset {
@@ -360,33 +416,37 @@
       visibility: hidden
     }
 
-    .navigation .menu .li {
-      display: inline-block;
-      list-style: none;
-    }
 
     .nav_item {
       position: relative;
       display: inline-block;
       font-weight: 600;
-      transition: var(--transition);
       z-index: 1
     }
-
-    .nav_item:hover {
+    .nav_item, #nav_1 {
+      padding-top: 0;
+      margin-top: 0;
+      transition: var(--transition);
+    }
+    .nav_item:hover:not(:first-child):not(:last-child) {
+      color: var(--news-flash);
+      padding-right: calc(12px * 1.1);
       padding-left: calc(12px * 1.1);
+    }
+
+    .menu li:first-child:hover{
       padding-right: calc(12px * 1.1);
       color: var(--news-flash);
     }
-
-    .menu li:first-child {
-      padding-top: 0;
+    .menu li:last-child:hover{
+      padding-left: calc(12px * 1.1);
+      color: var(--news-flash);
     }
-
     main {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
+        "intro intro"
         "breaking-news featured-articles"
         "breaking-news subscribe";
       margin-bottom: 0px;
@@ -410,10 +470,10 @@
     }
 
 
-
-
-    main>h2 {
-      grid-area: welcome;
+    #intro {
+      grid-area: intro;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
     #breaking-news {
@@ -430,16 +490,19 @@
     }
 
     #alerts {
+      
       margin-top: 10px;
       grid-area: subscribe;
       width: 55%;
-      height: 500px;
+      height: auto;
       background: var(--blue-bulletin);
       color: var(--watchdog-white);
-      padding: 15px;
+      padding: 0 1rem;
+      padding-bottom: 1.5rem;
       box-shadow: var(--shadow);
       border-radius: 10px;
       justify-self: center;
+      align-self: baseline;
     }
 
     #social {
@@ -451,11 +514,20 @@
       height: 45px;
     }
 
+    h3{
+      font-weight: 300;
+    }
+    p{
+      font-weight: 300;
+    }
+
+
+
     /* Text Formatting */
     header,
     main,
     footer {
-      font-size: clamp(16px, 4rem);
+      font-size: clamp(16px, 1vw, 2.5rem);
     }
   }
 
